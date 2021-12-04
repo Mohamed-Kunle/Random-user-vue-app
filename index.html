@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue js</title>
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-gray-400">
+    <div class="my-48 flex">
+      <div id="app" class="m-auto">
+        <img
+          :class="gender"
+          v-bind:src="picture"
+          alt=""
+          class="w-36 h-36 mx-auto rounded-full object-fill male"
+        />
+        <h1 class="font-semibold text-4xl text-center">
+          {{firstName}} {{lastName}}
+        </h1>
+        <h3 class="text-xl my-4 text-center">Email: {{email}}</h3>
+        <div class="flex">
+          <button
+            :class="gender"
+            v-on:click="getUser()"
+            class="px-6 py-2 text-white mx-auto"
+          >
+            Get Random User
+          </button>
+        </div>
+      </div>
+
+      <script src="js/vue.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </body>
+</html>
